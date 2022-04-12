@@ -18,19 +18,23 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
     - python-coreapi >=2.0.0
-    - django-stubs >=1.7.0
-    - mypy >=0.790
-    - python >=3.6
+    - django-stubs >=1.10.1
+    - mypy >=0.930,<0.950
+    - python >=3.7
     - requests >=2.0.0
     - typing-extensions >=3.7.2
+    - types-requests >=0.1.12
+    - types-pyyaml >=5.4.3
+    - types-markdown >=0.1.5
 
 test:
   imports:
     - mypy_drf_plugin
     - mypy_drf_plugin.lib
+    - mypy_drf_plugin.transformers
   commands:
     - pip check
   requires:
