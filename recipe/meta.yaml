@@ -30,10 +30,12 @@ requirements:
     - types-pyyaml >=5.4.3
     - types-requests >=0.1.12
 
+
 test:
   imports:
     - mypy_drf_plugin
     - mypy_drf_plugin.lib
+    - mypy_drf_plugin.transformers
   commands:
     - pip check
   requires:
