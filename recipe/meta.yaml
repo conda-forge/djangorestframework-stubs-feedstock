@@ -1,5 +1,5 @@
 {% set name = "djangorestframework-stubs" %}
-{% set version = "1.6.0" %}
+{% set version = "1.8.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/djangorestframework-stubs-{{ version }}.tar.gz
-  sha256: 6be773635d6cd859a4a56db6458c3f052076e08e70228a7f468979af1dfca53e
+  sha256: 9abf25d54a11930fe0fc97d0769e1ed58db8dfc134b1fdbd76bbbaaa932ef180
 
 build:
   number: 0
@@ -19,14 +19,13 @@ requirements:
   host:
     - pip
     - python >=3.7
+    - setuptools <64
   run:
-    - python-coreapi >=2.0.0
-    - django-stubs >=1.11.0
-    - mypy >=0.930,<0.950
+    - django-stubs >=1.13.0
+    - mypy >=0.980
     - python >=3.7
     - requests >=2.0.0
     - typing-extensions >=3.10.0
-    - types-markdown >=0.1.5
     - types-pyyaml >=5.4.3
     - types-requests >=0.1.12
 
@@ -34,8 +33,6 @@ requirements:
 test:
   imports:
     - mypy_drf_plugin
-    - mypy_drf_plugin.lib
-    - mypy_drf_plugin.transformers
   commands:
     - pip check
   requires:
