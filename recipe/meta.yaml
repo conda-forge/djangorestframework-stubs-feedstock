@@ -33,7 +33,6 @@ requirements:
 test:
   imports:
     - mypy_drf_plugin
-    - rest_framework-stubs
   commands:
     - pip check
   requires:
