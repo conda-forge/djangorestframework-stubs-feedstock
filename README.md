@@ -1,11 +1,11 @@
-About djangorestframework-stubs
-===============================
+About djangorestframework-stubs-feedstock
+=========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/djangorestframework-stubs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/typeddjango/djangorestframework-stubs
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/djangorestframework-stubs-feedstock/blob/main/LICENSE.txt)
 
 Summary: PEP-484 stubs for django-rest-framework
 
