@@ -1,5 +1,5 @@
 {% set name = "djangorestframework-stubs" %}
-{% set version = "1.10.0" %}
+{% set version = "3.14.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/djangorestframework-stubs-{{ version }}.tar.gz
-  sha256: 69e8a1ea7eb815cbe35155c27eee72522d7c8666d3cbdacb9997ab88c7b4202c
+  sha256: bbcb8b312581b9543992619cc191b77a5c0ea0c17a2d44752906c3d51a532cca
 
 build:
   number: 0
