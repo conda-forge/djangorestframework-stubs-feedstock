@@ -21,7 +21,7 @@ requirements:
     - python >=3.8
     - setuptools <64
   run:
-    - django-stubs >=4.2.2
+    - django-stubs >=4.2.4
     - mypy >=0.991
     - python >=3.8
     - requests >=2.0.0
