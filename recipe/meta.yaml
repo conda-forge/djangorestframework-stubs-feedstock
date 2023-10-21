@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools <64
+    - setuptools
   run:
     - django-stubs >=4.2.5
     - mypy >=0.991
