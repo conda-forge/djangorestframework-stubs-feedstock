@@ -1,5 +1,5 @@
 {% set name = "djangorestframework-stubs" %}
-{% set version = "3.14.4" %}
+{% set version = "3.14.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/djangorestframework-stubs-{{ version }}.tar.gz
-  sha256: 8ee8719bfeb647b92cc200e15b3cc9813d2e4468c8190777a55a121542a4b2d4
+  sha256: 5dd6f638aa5291fb7863e6166128a6ed20bf4986e2fc5cf334e6afc841797a09
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - python >=3.8
     - setuptools
   run:
-    - django-stubs >=4.2.5
+    - django-stubs >=4.2.7
     - mypy >=0.991
     - python >=3.8
     - requests >=2.0.0
