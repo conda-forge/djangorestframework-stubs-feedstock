@@ -19,16 +19,13 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools
   run:
-    - django-stubs >=4.2.7
-    - mypy >=0.991
     - python >=3.8
-    - requests >=2.0.0
+    - django-stubs >=5.0.0
     - typing-extensions >=3.10.0
-    - types-pyyaml >=5.4.3
+    - requests >=2.0.0
     - types-requests >=0.1.12
-
+    - types-pyyaml >=5.4.3
 
 test:
   imports:
