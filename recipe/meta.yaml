@@ -1,5 +1,5 @@
 {% set name = "djangorestframework-stubs" %}
-{% set version = "3.14.5" %}
+{% set version = "3.15.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/djangorestframework-stubs-{{ version }}.tar.gz
-  sha256: 5dd6f638aa5291fb7863e6166128a6ed20bf4986e2fc5cf334e6afc841797a09
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: f60ee1c80abb01a77acc0169969e07c45c2739ae64667b9a0dd4a2e32697dcab
 
 build:
   number: 0
@@ -19,16 +19,13 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools
   run:
-    - django-stubs >=4.2.7
-    - mypy >=0.991
     - python >=3.8
-    - requests >=2.0.0
+    - django-stubs >=5.0.0
     - typing-extensions >=3.10.0
-    - types-pyyaml >=5.4.3
+    - requests >=2.0.0
     - types-requests >=0.1.12
-
+    - types-pyyaml >=5.4.3
 
 test:
   imports:
