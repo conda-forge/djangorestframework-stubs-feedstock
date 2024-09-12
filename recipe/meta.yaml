@@ -19,9 +19,10 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
   run:
     - python >=3.8
-    - django-stubs >=5.0.0
+    - django-stubs >=5.0.4
     - typing-extensions >=3.10.0
     - requests >=2.0.0
     - types-requests >=0.1.12
