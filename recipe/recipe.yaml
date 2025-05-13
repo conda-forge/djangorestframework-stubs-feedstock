@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: djangorestframework-stubs
+  version: 3.16.0
+  python_min: 3.10
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 8c5ccdfe9271b1a37946a3564dc3714d521cd3f2f8695e528808e0c700538243
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools <79.0.0
+    - wheel
+  run:
+    - python >=${{ python_min }}
+    - django-stubs >=5.2.0
+    - typing_extensions >=4.0
+    - requests >=2.0
+    - types-requests
+    - types-pyyaml
+
+tests:
+  - python:
+      imports:
+        - mypy_drf_plugin
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: PEP-484 stubs for django-rest-framework
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://github.com/typeddjango/djangorestframework-stubs
+
+extra:
+  recipe-maintainers:
+    - thewchan
