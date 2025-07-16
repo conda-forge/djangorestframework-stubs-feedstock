@@ -26,7 +26,7 @@ requirements:
     - wheel
   run:
     - python >=${{ python_min }}
-    - django-stubs >=5.2.0
+    - django-stubs >=5.2.1
     - typing_extensions >=4.0
     - requests >=2.0
     - types-requests
