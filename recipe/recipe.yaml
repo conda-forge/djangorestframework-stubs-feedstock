@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: djangorestframework-stubs
-  version: "3.16.3"
+  version: "3.16.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 200c620192da20a50a85b3e7d35cc7ec795aa9a58371a7f91368d4023e1b78f7
+  sha256: f43136bfbef568dd0e10848427c01bd9ef759dd328195949f6f7f9a2292a34f6
 
 build:
   number: 0
@@ -21,8 +21,7 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools <79.0.0
-    - wheel
+    - uv-build >=0.8.19,<0.9.0
   run:
     - python >=${{ python_min }}
     - django-stubs >=5.2.5
