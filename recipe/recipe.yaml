@@ -21,10 +21,10 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - uv-build >=0.8.19,<0.9.0
+    - uv-build >=0.8.19,<0.10.0
   run:
     - python >=${{ python_min }}
-    - django-stubs >=5.2.5
+    - django-stubs >=5.2.7
     - typing_extensions >=4.0
     - requests >=2.0
     - types-requests
