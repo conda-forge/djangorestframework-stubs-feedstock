@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: djangorestframework-stubs
-  version: "3.16.8"
+  version: "3.16.9"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: f6d464b54fa2f929610e957446c04e6ac29558265418e0a2d9f653a4cdd410b5
+  sha256: b1abb97490c90c85eabcd09b8ecbadae1b9360f21ad3021abf830227c0129697
 
 build:
   number: 0
@@ -21,12 +21,11 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - uv-build >=0.8.19,<0.10.0
+    - uv-build >=0.11.0,<0.12.0
   run:
     - python >=${{ python_min }}
-    - django-stubs >=5.2.8
+    - django-stubs >=5.2.9
     - typing_extensions >=4.0
-    - types-requests
     - types-pyyaml
 
 tests:
@@ -34,7 +33,9 @@ tests:
       imports:
         - mypy_drf_plugin
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: PEP-484 stubs for django-rest-framework
