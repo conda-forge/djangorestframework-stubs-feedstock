@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: djangorestframework-stubs
-  version: "3.17.0"
+  version: "3.17.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 74c0307cad304c03c15aee5955ec2fdeab0ac854b5bea569dc124892792e2b96
+  sha256: 5b67655090e2976b778bad572840b732a87ab2911402530d0dca2fbf72f891c5
 
 build:
   number: 0
